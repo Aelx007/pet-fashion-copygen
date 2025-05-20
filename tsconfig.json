@@ -13,9 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",                             // ✅ 添加
+    "baseUrl": ".",                             
     "paths": {
-      "@/*": ["./*"]                            // ✅ 添加
+      "@/*": ["./*"]                            
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
