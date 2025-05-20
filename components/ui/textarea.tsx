@@ -1,13 +1,13 @@
-import * as React from "react";
+import React from "react";
 
 export const Textarea = React.forwardRef<
   HTMLTextAreaElement,
   React.TextareaHTMLAttributes<HTMLTextAreaElement>
->(({ className, ...props }, ref) => {
+>(({ className = "", ...props }, ref) => {
   return (
     <textarea
-      className={`w-full border rounded-md p-2 ${className}`}
       ref={ref}
+      className={`w-full min-h-[100px] p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
       {...props}
     />
   );
