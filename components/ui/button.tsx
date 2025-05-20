@@ -1,5 +1,15 @@
-export const Button = ({ children, ...props }: any) => (
-  <button {...props} className="px-4 py-2 bg-black text-white rounded hover:opacity-80 disabled:opacity-50 flex items-center justify-center">
-    {children}
-  </button>
-);
+import * as React from "react";
+
+export const Button = React.forwardRef<
+  HTMLButtonElement,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>(({ className, ...props }, ref) => {
+  return (
+    <button
+      ref={ref}
+      className={`inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 disabled:opacity-50 ${className}`}
+      {...props}
+    />
+  );
+});
+Button.displayName = "Button";
